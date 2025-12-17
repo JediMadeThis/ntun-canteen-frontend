@@ -1,1 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght,ROND@6..144,1..1000,100&display=swap');
 
+* {
+  font-family: "Google Sans Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "ROND" 100;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear;
+}
+
+.fade.showFade {
+  visibility: visible;
+  opacity: 0.7;
+}
+
+.introcard-wrapper {
+  width: 80%;
+  border-radius: 15px;
+  background: linear-gradient(90deg, rgba(173, 216, 230, 0.4), rgba(255, 182, 193, 0.4));
+  margin: 30px auto;
+  box-shadow: 0 0 15px lightgray;
+}
+
+.introcard {
+  padding: 30px;
+  margin: 15px;
+}
+
+.introcard h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.introcard p {
+  font-size: 24px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.introcard .ntun-gradient {
+  background: linear-gradient(45deg, rgb(147, 217, 240), rgb(219, 142, 154));
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.introcard .introcard-reserve-btn {
+  border: none;
+  background-color: rgba(173, 216, 230, 0.9);
+  padding: 20px 35px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 15px;
+  margin-top: 25px;
+  box-shadow: 0 0 15px lightgray;
+  transition:
+    background-color 0.2s linear,
+    transform 0.2s linear,
+    backdrop-filter 0.2s linear;
+}
+
+.introcard .introcard-reserve-btn:hover {
+  background-color: rgba(173, 216, 230, 0.6);
+}
+
+.introcard .introcard-reserve-btn:active {
+  backdrop-filter: brightness(0.75);
+  transform: scale(0.985);
+}
+
+.popular-picks-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 35px;
+  border: 1.8px solid lightgray;
+  border-radius: 20px;
+  background-color: rgba(233, 233, 233, 0.2);
+  box-shadow: 0 0 15px lightgray;
+}
+
+.popular-picks {
+  padding: 10px;
+  margin: 20px;
+}
+
+.popular-picks-header {
+  font-weight: 600;
+  margin: 0;
+}
+
+.popular-picks-placeholder {
+  text-align: center;
+}
+
+.popular-picks-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.popular-pick-wrapper {
+  max-width: calc((100% / 4) - (15px * 3 / 4));
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: white;
+  box-shadow: 0 0 15px lightgray;
+  border-radius: 10px;
+}
+
+.popular-pick {
+  margin: 20px;
+}
+
+.popular-pick .popular-pick-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.popular-pick-btn-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.popular-pick .popular-pick-btn {
+  border: none;
+  font-weight: 500;
+  background: linear-gradient(45deg, rgba(173, 216, 230), rgba(173, 216, 230, 0.5));
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px lightgray;
+  width: 90%;
+  transition:
+    opacity 0.2s linear,
+    transform 0.2s linear,
+    backdrop-filter 0.2s linear;
+}
+
+.popular-pick .popular-pick-btn:hover {
+  opacity: 0.85;
+}
+
+.popular-pick .popular-pick-btn:active {
+  transform: scale(0.985);
+  backdrop-filter: brightness(0.75);
+}
+
+
+
+
+.favorites-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 35px;
+  border: 1.8px solid lightgray;
+  border-radius: 20px;
+  background-color: rgba(233, 233, 233, 0.2);
+  box-shadow: 0 0 15px lightgray;
+}
+
+.favorites {
+  padding: 10px;
+  margin: 20px;
+}
+
+.favorites-header {
+  font-weight: 600;
+  margin: 0;
+}
+
+.favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.favorite-wrapper {
+  max-width: calc((100% / 3) - (15px * 2 / 3));
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: white;
+  box-shadow: 0 0 15px lightgray;
+  border-radius: 10px;
+}
+
+.favorite {
+  margin: 20px;
+}
+
+.favorite .favorite-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.favorite-btn-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.favorite .favorite-btn {
+  border: none;
+  font-weight: 500;
+  background: linear-gradient(45deg, rgba(255, 182, 193), rgba(255, 182, 193, 0.5));
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px lightgray;
+  width: 90%;
+  transition:
+    opacity 0.2s linear,
+    transform 0.2s linear,
+    backdrop-filter 0.2s linear;
+}
+
+.favorite .favorite-btn:hover {
+  opacity: 0.85;
+}
+
+.favorite .favorite-btn:active {
+  transform: scale(0.985);
+  backdrop-filter: brightness(0.75);
+}
