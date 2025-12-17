@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NTUN Smart Canteen</title>
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="fade" id="fade"></div>
+
+    <div class="navbar">
+      <div class="navbar-left">
+        <button class="navbar-header" onclick="scrollSmoothlyToTop()">
+          <div class="btnContent">NTUN Smart Canteen</div>
+        </button>
+      </div>
+
+      <div class="navbar-center">
+        <button onclick="scrollSmoothlyToTop()">
+          <div class="btnContent">Home</div>
+        </button>
+        <button onclick="scrollSmoothlyTo('.popular-picks-wrapper')">
+          <div class="btnContent">Popular</div>
+        </button>
+        <button onclick="scrollSmoothlyTo('.favorites-wrapper')">
+          <div class="btnContent">My Favorites</div>
+        </button>
+      </div>
+
+      <div class="navbar-right">
+        <button class="navbar-signin" onclick="navigateTo('sign-in.html')">
+          <div class="btnContent">Sign In</div>
+        </button>
+      </div>
+    </div>
+
+    <div class="introcard-wrapper">
+      <div class="introcard">
+        <h1><span class="ntun-gradient">NTUN</span> Smart Canteen</h1>
+        <p>Reserve your favorite restaurant and menu now</p>
+        <button class="introcard-reserve-btn">Reserve a dish</button>
+      </div>
+    </div>
+
+    <div class="popular-picks-wrapper">
+      <div class="popular-picks">
+        <h1 class="popular-picks-header">Popular Picks</h1>
+
+        <div class="popular-picks-list" id="popular-picks-list">
+          <!-- <div class="popular-pick-wrapper">
+            <div class="popular-pick">
+              <h1 class="popular-pick-name">Popular 1</h1>
+              <p class="popular-pick-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="popular-pick-btn-wrapper">
+                <button class="popular-pick-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="popular-pick-wrapper">
+            <div class="popular-pick">
+              <h1 class="popular-pick-name">Popular 2</h1>
+              <p class="popular-pick-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="popular-pick-btn-wrapper">
+                <button class="popular-pick-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="popular-pick-wrapper">
+            <div class="popular-pick">
+              <h1 class="popular-pick-name">Popular 3</h1>
+              <p class="popular-pick-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="popular-pick-btn-wrapper">
+                <button class="popular-pick-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="popular-pick-wrapper">
+            <div class="popular-pick">
+              <h1 class="popular-pick-name">Popular 4</h1>
+              <p class="popular-pick-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="popular-pick-btn-wrapper">
+                <button class="popular-pick-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="popular-pick-wrapper">
+            <div class="popular-pick">
+              <h1 class="popular-pick-name">Popular 5</h1>
+              <p class="popular-pick-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="popular-pick-btn-wrapper">
+                <button class="popular-pick-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="popular-pick-wrapper">
+            <div class="popular-pick">
+              <h1 class="popular-pick-name">Popular 6</h1>
+              <p class="popular-pick-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="popular-pick-btn-wrapper">
+                <button class="popular-pick-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="popular-pick-wrapper">
+            <div class="popular-pick">
+              <h1 class="popular-pick-name">Popular 7</h1>
+              <p class="popular-pick-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="popular-pick-btn-wrapper">
+                <button class="popular-pick-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="popular-pick-wrapper">
+            <div class="popular-pick">
+              <h1 class="popular-pick-name">Popular 8</h1>
+              <p class="popular-pick-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="popular-pick-btn-wrapper">
+                <button class="popular-pick-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="favorites-wrapper" id="favorites-wrapper">
+      <div class="favorites">
+        <h1 class="favorites-header">My Favorites</h1>
+
+        <div class="favorites-list" id="favorites-list">
+          <!-- <div class="favorite-wrapper">
+            <div class="favorite">
+              <h1 class="favorite-name">Favorite 1</h1>
+              <p class="favorite-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="favorite-btn-wrapper">
+                <button class="favorite-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="favorite-wrapper">
+            <div class="favorite">
+              <h1 class="favorite-name">Favorite 2</h1>
+              <p class="favorite-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="favorite-btn-wrapper">
+                <button class="favorite-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="favorite-wrapper">
+            <div class="favorite">
+              <h1 class="favorite-name">Favorite 3</h1>
+              <p class="favorite-desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="favorite-btn-wrapper">
+                <button class="favorite-btn">View details & reserve</button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/redirectScript.js"></script>
+  </body>
+</html>

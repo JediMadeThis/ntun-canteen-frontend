@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sign in</title>
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/sign-in.css" />
+  </head>
+  <body>
+    <div class="fade" id="fade"></div>
+
+    <div class="navbar">
+      <div class="navbar-left">
+        <button class="navbar-header" onclick="navigateTo('index.html')">
+          <div class="btnContent">NTUN Smart Canteen</div>
+        </button>
+      </div>
+
+      <div class="navbar-right">
+        <button onclick="navigateTo('sign-up.html')">
+          <div class="btnContent">Sign Up</div>
+        </button>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="student-signin-wrapper">
+        <div class="student-signin">
+          <div class="signin-text">
+            <h1 class="student-signin-header">Student Sign-in</h1>
+            <p class="student-signin-desc">
+              For students.
+            </p>
+          </div>
+
+          <form
+            class="signin-form-wrapper"
+            id="student-signin-form"
+            action="http://localhost:4000/api/student/signin"
+            method="post"
+          >
+            <div class="signin-form">
+              <div>
+                <label for="studentId">Student ID</label><br />
+                <input
+                  type="number"
+                  id="studentId"
+                  name="studentId"
+                  placeholder="12345"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="studentPassword">Password</label><br />
+                <input
+                  type="password"
+                  id="studentPassword"
+                  name="studentPassword"
+                  placeholder="Password"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="signin-submit">
+              <button class="signin-btn" type="submit">Sign In</button>
+              <a
+                onclick="alert('Please contact the school administrator for a password reset.')"
+                class="signin-forgot"
+                >Forgot password?</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="shop-signin-wrapper">
+        <div class="shop-signin">
+          <div class="signin-text">
+            <h1 class="shop-signin-header">Shop Sign-in</h1>
+            <p class="shop-signin-desc">For shop owners.</p>
+          </div>
+
+          <form
+            class="signin-form-wrapper"
+            id="shop-signin-form"
+            action="http://localhost:4000/api/shop/signin"
+            method="post"
+          >
+            <div class="signin-form">
+              <div>
+                <label for="shopId">Shop ID</label><br />
+                <input
+                  type="text"
+                  id="shopId"
+                  name="shopId"
+                  placeholder="SC-01"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="shopPassword">Password</label><br />
+                <input
+                  type="password"
+                  id="shopPassword"
+                  name="shopPassword"
+                  placeholder="Password"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="signin-submit">
+              <button class="signin-btn">Sign In</button>
+              <a
+                onclick="alert('Please contact the school administrator for a password reset.')"
+                class="signin-forgot"
+                >Forgot password?</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/sign-in.js"></script>
+    <script src="js/redirectScript.js"></script>
+  </body>
+</html>
